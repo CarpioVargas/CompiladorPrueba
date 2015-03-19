@@ -22,133 +22,133 @@ public String lexema;
 %%
 {ESPACIO} {/*Ignore*/}
 "//".* {/*Ignore*/}
-"=" {lexema=yytext(); return ASIGNACION;}
-"==" {lexema=yytext(); return IGUAL;}
-"!=" {lexema=yytext(); return DIFERENTE;}
-"+" {lexema=yytext(); return MAS;}
-"-" {lexema=yytext(); return MENOS;}
-"*" {lexema=yytext(); return MULTIPLICACION;}
-"/" {lexema=yytext(); return DIVISION;}
-"echo" {lexema=yytext(); return T_ECHO;}
-"abstract" {lexema=yytext(); return T_ABSTRACT;}
-"&=" {lexema=yytext(); return T_AND_EQUAL;}
-"array" {lexema=yytext(); return T_ARRAY;}
-"(array)" {lexema=yytext(); return T_ARRAY_CAST;}
-"as" {lexema=yytext(); return T_AS;}
-"&&" {lexema=yytext(); return T_BOOLEAN_AND;}
-"||" {lexema=yytext(); return T_BOOLEAN_OR;}
-"(bool)" {lexema=yytext(); return T_BOOL_CAST;}
-"(boolean)" {lexema=yytext(); return T_BOOL_CAST;}
-"break" {lexema=yytext(); return T_BREAK;}
-"callable" {lexema=yytext(); return T_CALLABLE;}
-"case" {lexema=yytext(); return T_CASE;}
-"catch" {lexema=yytext(); return T_CATCH;}
-"class" {lexema=yytext(); return T_CLASS;}
-"__CLASS__" {lexema=yytext(); return T_CLASS_C;}
-"clone" {lexema=yytext(); return T_CLONE;}
-"?>" {lexema=yytext(); return T_CLOSE_TAG;}
-".=" {lexema=yytext(); return T_CONCAT_EQUAL;}
-"const" {lexema=yytext(); return T_CONST;}
-"continue" {lexema=yytext(); return T_CONTINUE;}
-"{?" {lexema=yytext(); return T_CURLY_OPEN;}
-"--" {lexema=yytext(); return T_DEC;}
-"declare" {lexema=yytext(); return T_DECLARE;}
-"default" {lexema=yytext(); return T_DEFAULT;}
-"__DIR__" {lexema=yytext(); return T_DIR;}
-"/=" {lexema=yytext(); return T_DIV_EQUAL;}
-"do" {lexema=yytext(); return T_DO;}
-"${" {lexema=yytext(); return T_DOLLAR_OPEN_CURLY_BRACES;}
-"=>" {lexema=yytext(); return T_DOUBLE_ARROW;}
-"(real)" {lexema=yytext(); return T_DOUBLE_CAST;}
-"(double)" {lexema=yytext(); return T_DOUBLE_CAST;}
-"(float)" {lexema=yytext(); return T_DOUBLE_CAST;}
-"::" {lexema=yytext(); return T_DOUBLE_COLON;}
-"else" {lexema=yytext(); return T_ELSE;}
-"elseif" {lexema=yytext(); return T_ELSEIF;}
-"empty" {lexema=yytext(); return T_EMPTY;}
-"enddeclare" {lexema=yytext(); return T_ENDDECLARE;}
-"endfor" {lexema=yytext(); return T_ENDFOR;}
-"endforeach" {lexema=yytext(); return T_ENDFOREACH;}
-"endif" {lexema=yytext(); return T_ENDIF;}
-"endswitch" {lexema=yytext(); return T_ENDSWITCH;}
-"endwhile" {lexema=yytext(); return T_ENDWHILE;}
-"eval" {lexema=yytext(); return T_EVAL;}
-"exit" {lexema=yytext(); return T_EXIT;}
-"die" {lexema=yytext(); return T_EXIT;}
-"extends" {lexema=yytext(); return T_EXTENDS;}
-"__FILE__" {lexema=yytext(); return T_FILE;}
-"final" {lexema=yytext(); return T_FINAL;}
-"finally" {lexema=yytext(); return T_FINALLY;}
-"for" {lexema=yytext(); return T_FOR;}
-"foreach" {lexema=yytext(); return T_FOREACH;}
-"function" {lexema=yytext(); return T_FUNCTION;}
-"cfunction" {lexema=yytext(); return T_FUNC_C;}
-"global" {lexema=yytext(); return T_GLOBAL;}
-"goto" {lexema=yytext(); return T_GOTO;}
-"if" {lexema=yytext(); return T_IF;}
-"implements" {lexema=yytext(); return T_IMPLEMENTS;}
-"++" {lexema=yytext(); return T_INC;}
-"include" {lexema=yytext(); return T_INCLUDE;}
-"include_once" {lexema=yytext(); return T_INCLUDE_ONCE;}
-"instanceof" {lexema=yytext(); return T_INSTANCEOF;}
-"insteadof" {lexema=yytext(); return T_INSTEADOF;}
-"(int)" {lexema=yytext(); return T_INT_CAST;}
-"(integer)" {lexema=yytext(); return T_INT_CAST;}
-"interface" {lexema=yytext(); return T_INTERFACE;}
-"isset" {lexema=yytext(); return T_ISSET;}
-">=" {lexema=yytext(); return T_IS_GREATER_OR_EQUAL;}
-"===" {lexema=yytext(); return T_IS_IDENTICAL;}
-"!=" {lexema=yytext(); return T_IS_NOT_EQUAL;}
-"<>" {lexema=yytext(); return T_IS_NOT_EQUAL;}
-"!==" {lexema=yytext(); return T_IS_NOT_IDENTICAL;}
-"<=" {lexema=yytext(); return T_IS_SMALLER_OR_EQUAL;}
-"__LINE__" {lexema=yytext(); return T_LINE;}
-"list" {lexema=yytext(); return T_LIST;}
-"and" {lexema=yytext(); return T_LOGICAL_AND;}
-"or" {lexema=yytext(); return T_LOGICAL_OR;}
-"xor" {lexema=yytext(); return T_LOGICAL_XOR;}
-"__METHOD__" {lexema=yytext(); return T_METHOD_C;}
-"-=" {lexema=yytext(); return T_MINUS_EQUAL;}
-"%=" {lexema=yytext(); return T_MOD_EQUAL;}
-"*=" {lexema=yytext(); return T_MUL_EQUAL;}
-"namespace" {lexema=yytext(); return T_NAMESPACE;}
-"__NAMESPACE__" {lexema=yytext(); return T_NS_C;}
-"\\" {lexema=yytext(); return T_NS_SEPARATOR;}
-"new" {lexema=yytext(); return T_NEW;}
-"(object)" {lexema=yytext(); return T_OBJECT_CAST;}
-"->" {lexema=yytext(); return T_OBJECT_OPERATOR;}
-"<?php" {lexema=yytext(); return T_OPEN_TAG;}
-"<?" {lexema=yytext(); return T_OPEN_TAG;}
-"<%" {lexema=yytext(); return T_OPEN_TAG;}
-"<?=" {lexema=yytext(); return T_OPEN_TAG_WITH_ECHO;}
-"<%=" {lexema=yytext(); return T_OPEN_TAG_WITH_ECHO;}
-"|=" {lexema=yytext(); return T_OR_EQUAL;}
-"+=" {lexema=yytext(); return T_PLUS_EQUAL;}
-"," {lexema=yytext(); return COMA;}
-"**" {lexema=yytext(); return T_POW;}
-"**=" {lexema=yytext(); return T_POW_EQUAL;}
-"print" {lexema=yytext(); return T_PRINT;}
-"private" {lexema=yytext(); return T_PRIVATE;}
-"public" {lexema=yytext(); return T_PUBLIC;}
-"protected" {lexema=yytext(); return T_PROTECTED;}
-"require" {lexema=yytext(); return T_REQUIRE;}
-"require_once" {lexema=yytext(); return T_REQUIRE_ONCE;}
-"return" {lexema=yytext(); return T_RETURN;}
-"<<" {lexema=yytext(); return T_SL;}
-"<<=" {lexema=yytext(); return T_SL_EQUAL;}
-">>" {lexema=yytext(); return T_SR;}
-">>=" {lexema=yytext(); return T_SR_EQUAL;}
-"<<<" {lexema=yytext(); return T_START_HEREDOC;}
-"static" {lexema=yytext(); return T_STATIC;}
-{LETRA} {lexema=yytext(); return ID;}
-{DIGITO} {lexema=yytext(); return ENTERO;}
-{CADENA} {lexema=yytext(); return CADENA;}
-{FLOAT} {lexema=yytext(); return FLOAT;}
-{VARIABLE} {lexema=yytext(); return VARIABLE;}
-{MF} {lexema=yytext(); return MF;}
-{CARACTER} {lexema=yytext(); return CARACTER;}
-{MD} {lexema=yytext(); return MD;}
-{COMENT_BLOQUE} {lexema=yytext(); return COMENT_BLOQUE;}
-{CONJUNCION} {lexema=yytext(); return CONJUNCION;}
-{SEPARADOR} {lexema=yytext(); return SEPARADOR;}
+"=" {return new Symbol(sym.ASIGNACION, yychar, yyline, yytext());}
+"==" {return new Symbol(sym.IGUAL, yychar, yyline, yytext());}
+"!=" {return new Symbol(sym.DIFERENTE, yychar, yyline, yytext());}
+"+" {return new Symbol(sym.MAS, yychar, yyline, yytext());}
+"-" {return new Symbol(sym.MENOS, yychar, yyline, yytext());}
+"*" {return new Symbol(sym.MULTIPLICACION, yychar, yyline, yytext());}
+"/" {return new Symbol(sym.DIVESION, yychar, yyline, yytext());}
+"echo" {return new Symbol(sym.ECHO, yychar, yyline, yytext());}
+"abstract" {return new Symbol(sym.T_ABSTRACT, yychar, yyline, yytext());}
+"&=" {return new Symbol(sym.T_AND_EQUAL, yychar, yyline, yytext());}
+"array" {return new Symbol(sym.T_ARRAY, yychar, yyline, yytext());}
+"(array)" {return new Symbol(sym.T_ARRAY_CAST, yychar, yyline, yytext());}
+"as" {return new Symbol(sym.T_AS, yychar, yyline, yytext());}
+"&&" {return new Symbol(sym.T_BOOLEAN_AND, yychar, yyline, yytext());}
+"||" {return new Symbol(sym.T_BOOLEAN_OR, yychar, yyline, yytext());}
+"(bool)" {return new Symbol(sym.T_BOOL_CAST, yychar, yyline, yytext());}
+"(boolean)" {return new Symbol(sym.T_BOOL_CAST, yychar, yyline, yytext());}
+"break" {return new Symbol(sym.T_BREAK, yychar, yyline, yytext());}
+"callable" {return new Symbol(sym.T_CALLABLE, yychar, yyline, yytext());}
+"case" {return new Symbol(sym.T_CASE, yychar, yyline, yytext());}
+"catch" {return new Symbol(sym.T_CATCH, yychar, yyline, yytext());}
+"class" {return new Symbol(sym.T_CLASS, yychar, yyline, yytext());}
+"__CLASS__" {return new Symbol(sym.T_CLASS_C, yychar, yyline, yytext());}
+"clone" {return new Symbol(sym.T_CLONE, yychar, yyline, yytext());}
+"?>" {return new Symbol(sym.T_CLOSE_TAG, yychar, yyline, yytext());}
+".=" {return new Symbol(sym.T_CONCAT_EQUAL, yychar, yyline, yytext());}
+"const" {return new Symbol(sym.T_CONST, yychar, yyline, yytext());}
+"continue" {return new Symbol(sym.T_CONTINUE, yychar, yyline, yytext());}
+"{?" {return new Symbol(sym.T_CURLY_OPEN, yychar, yyline, yytext());}
+"--" {return new Symbol(sym.T_DEC, yychar, yyline, yytext());}
+"declare" {return new Symbol(sym.T_DECLARE, yychar, yyline, yytext());}
+"default" {return new Symbol(sym.T_DEFAULT, yychar, yyline, yytext());}
+"__DIR__" {return new Symbol(sym.T_DIR, yychar, yyline, yytext());}
+"/=" {return new Symbol(sym.T_DIV_EQUAL, yychar, yyline, yytext());}
+"do" {return new Symbol(sym.T_DO, yychar, yyline, yytext());}
+"${" {return new Symbol(sym.T_DOLLAR_OPEN_CURLY_BRACES, yychar, yyline, yytext());}
+"=>" {return new Symbol(sym.T_DOUBLE_ARROW, yychar, yyline, yytext());}
+"(real)" {return new Symbol(sym.T_DOUBLE_CAST, yychar, yyline, yytext());}
+"(double)" {return new Symbol(sym.T_DOUBLE_CAST, yychar, yyline, yytext());}
+"(float)" {return new Symbol(sym.T_DOUBLE_CAST, yychar, yyline, yytext());}
+"::" {return new Symbol(sym.T_DOUBLE_COLON, yychar, yyline, yytext());}
+"else" {return new Symbol(sym.T_ELSE, yychar, yyline, yytext());}
+"elseif" {return new Symbol(sym.T_ELSEIF, yychar, yyline, yytext());}
+"empty" {return new Symbol(sym.T_EMPTY, yychar, yyline, yytext());}
+"enddeclare" {return new Symbol(sym.T_ENDDECLARE, yychar, yyline, yytext());}
+"endfor" {return new Symbol(sym.T_ENDFOR, yychar, yyline, yytext());}
+"endforeach"{return new Symbol(sym.T_ENDFOREACH, yychar, yyline, yytext());}
+"endif" {return new Symbol(sym.T_ENDIF, yychar, yyline, yytext());}
+"endswitch" {return new Symbol(sym.T_ENDSWITCH, yychar, yyline, yytext());}
+"endwhile" {return new Symbol(sym.T_ENDWHILE, yychar, yyline, yytext());}
+"eval" {return new Symbol(sym.T_EVAL, yychar, yyline, yytext());}
+"exit" {return new Symbol(sym.T_EXIT, yychar, yyline, yytext());}
+"die" {return new Symbol(sym.T_EXIT, yychar, yyline, yytext());}
+"extends" {return new Symbol(sym.T_EXTENDS, yychar, yyline, yytext());}
+"__FILE__" {return new Symbol(sym.T_FILE, yychar, yyline, yytext());}
+"final" {return new Symbol(sym.T_FINAL, yychar, yyline, yytext());}
+"finally" {return new Symbol(sym.T_FINALLY, yychar, yyline, yytext());}
+"for" {return new Symbol(sym.T_FOR, yychar, yyline, yytext());}
+"foreach" {return new Symbol(sym.T_FOREACH, yychar, yyline, yytext());}
+"function" {return new Symbol(sym.T_FUNCTION, yychar, yyline, yytext());}
+"cfunction" {return new Symbol(sym.T_FUNC_C, yychar, yyline, yytext());}
+"global" {return new Symbol(sym.T_GLOBAL, yychar, yyline, yytext());}
+"goto" {return new Symbol(sym.T_GOTO, yychar, yyline, yytext());}
+"if" {return new Symbol(sym.T_IF, yychar, yyline, yytext());}
+"implements" {return new Symbol(sym.T_IMPLEMENTS, yychar, yyline, yytext());}
+"++" {return new Symbol(sym.T_INC, yychar, yyline, yytext());}
+"include" {return new Symbol(sym.T_INCLUDE, yychar, yyline, yytext());}
+"include_once" {return new Symbol(sym.T_INCLUDE_ONCE, yychar, yyline, yytext());}
+"instanceof" {return new Symbol(sym.T_INSTANCEOF, yychar, yyline, yytext());}
+"insteadof" {return new Symbol(sym.T_INS, yychar, yyline, yytext());}{lexema=yytext(); return T_INSTEADOF;}
+"(int)" {return new Symbol(sym.T_INT_CAST, yychar, yyline, yytext());}
+"(integer)" {return new Symbol(sym.T_INT_CAST, yychar, yyline, yytext());}
+"interface" {return new Symbol(sym.T_INTERFACE, yychar, yyline, yytext());}
+"isset" {return new Symbol(sym.T_ISSET, yychar, yyline, yytext());}
+">=" {return new Symbol(sym.T_IS_GREATER_OR_EQUAL, yychar, yyline, yytext());}
+"===" {return new Symbol(sym.T_IS_IDENTICAL, yychar, yyline, yytext());}
+"!=" {return new Symbol(sym.T_IS_NOT_EQUAL, yychar, yyline, yytext());}
+"<>" {return new Symbol(sym.T_IS_NOT_EQUAL, yychar, yyline, yytext());}
+"!==" {return new Symbol(sym.T_IS_NOT_IDENTICAL, yychar, yyline, yytext());}
+"<=" {return new Symbol(sym.T_IS_SMALLER_OR_EQUAL, yychar, yyline, yytext());}
+"__LINE__" {return new Symbol(sym.T_LINE, yychar, yyline, yytext());}
+"list" {return new Symbol(sym.T_LIST, yychar, yyline, yytext());}
+"and" {return new Symbol(sym.T_LOGICAL_AND, yychar, yyline, yytext());}
+"or" {return new Symbol(sym.T_LOGICAL_OR, yychar, yyline, yytext());}
+"xor" {return new Symbol(sym.T_LOGICAL_XOR, yychar, yyline, yytext());}
+"__METHOD__" {return new Symbol(sym.T_METHOD_C, yychar, yyline, yytext());}
+"-=" {return new Symbol(sym.T_MINUS_EQUAL, yychar, yyline, yytext());}
+"%=" {return new Symbol(sym.T_MOD_EQUAL, yychar, yyline, yytext());}
+"*=" {return new Symbol(sym.T_MUL_EQUAL, yychar, yyline, yytext());}
+"namespace" {return new Symbol(sym.T_NAMESPACE, yychar, yyline, yytext());}
+"__NAMESPACE__" {return new Symbol(sym.T_NS_C, yychar, yyline, yytext());}
+"\\" {return new Symbol(sym.T_NS_SEPARATOR, yychar, yyline, yytext());}
+"new" {return new Symbol(sym.T_NEW, yychar, yyline, yytext());}
+"(object)" {return new Symbol(sym.T_OBJECT_CAST, yychar, yyline, yytext());}
+"->" {return new Symbol(sym.T_OBJECT_OPERATOR, yychar, yyline, yytext());}
+"<?php" {return new Symbol(sym.T_OPEN_TAG, yychar, yyline, yytext());}
+"<?" {return new Symbol(sym.T_OPEN_TAG, yychar, yyline, yytext());}
+"<%" {return new Symbol(sym.T_OPEN_TAG, yychar, yyline, yytext());}
+"<?=" {return new Symbol(sym.T_OPEN_TAG_WITH_ECHO, yychar, yyline, yytext());}
+"<%=" {return new Symbol(sym.T_OPEN_TAG_WITH_ECHO, yychar, yyline, yytext());}
+"|=" {return new Symbol(sym.T_OR_EQUAL, yychar, yyline, yytext());}
+"+=" {return new Symbol(sym.T_PLUS_EQUAL, yychar, yyline, yytext());}
+"," {return new Symbol(sym.COMA, yychar, yyline, yytext());}
+"**" {return new Symbol(sym.T_POW, yychar, yyline, yytext());}
+"**=" {return new Symbol(sym.T_POW_EQUAL, yychar, yyline, yytext());}
+"print" {return new Symbol(sym.T_PRINT, yychar, yyline, yytext());}
+"private" {return new Symbol(sym.T_PRIVATE, yychar, yyline, yytext());}
+"public" {return new Symbol(sym.T_PUBLIC, yychar, yyline, yytext());}
+"protected" {return new Symbol(sym.T_PROTECTED, yychar, yyline, yytext());}
+"require" {return new Symbol(sym.T_REQUIRE, yychar, yyline, yytext());}
+"require_once" {return new Symbol(sym.T_REQUIRE_ONCE, yychar, yyline, yytext());}
+"return" {return new Symbol(sym.T_RETURN, yychar, yyline, yytext());}
+"<<" {return new Symbol(sym.T_SL, yychar, yyline, yytext());}
+"<<=" {return new Symbol(sym.T_ZL_EQUAL, yychar, yyline, yytext());}
+">>" {return new Symbol(sym.T_SR, yychar, yyline, yytext());}
+">>=" {return new Symbol(sym.T_SR_EQUAL, yychar, yyline, yytext());}
+"<<<" {return new Symbol(sym.T_START_HEREDOC, yychar, yyline, yytext());}
+"static" {return new Symbol(sym.T_STATIC, yychar, yyline, yytext());}
+{LETRA} {return new Symbol(sym.ID, yychar, yyline, yytext());}
+{DIGITO} {return new Symbol(sym.ENTERO, yychar, yyline, yytext());}
+{CADENA} {return new Symbol(sym.CADENA, yychar, yyline, yytext());}
+{FLOAT} {return new Symbol(sym.FLOAT, yychar, yyline, yytext());}
+{VARIABLE} {return new Symbol(sym.VARIABLE, yychar, yyline, yytext());}
+{MF} {return new Symbol(sym.MF, yychar, yyline, yytext());}
+{CARACTER} {return new Symbol(sym.CARACTER, yychar, yyline, yytext());}
+{MD} {return new Symbol(sym.MD, yychar, yyline, yytext());}
+{COMENT_BLOQUE} {return new Symbol(sym.COMENT_BLOQUE, yychar, yyline, yytext());}
+{CONJUNCION} {return new Symbol(sym.CONJUNCION, yychar, yyline, yytext());}
+{SEPARADOR} {return new Symbol(sym.SEPARADOR, yychar, yyline, yytext());}
 . {return ERROR;}
